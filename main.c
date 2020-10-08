@@ -37,6 +37,7 @@ int main(){
             else x++;
         }
     }
+
     for (int i = 0;i <= 3;i++)
         printf("%d",reality[i]);
     return 0;
