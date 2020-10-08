@@ -6,8 +6,10 @@ int main(){
     int reality[4] = {0};
     int try[4] = {0};
     int tool = 0; //工具
+    int sameNumber = 0;//相同的数个数
+    int sameLocation = 0;
     srand(time(0));//刷新时间
-
+    //并用户输入
     for (int i = 0;i <= 3;i++){
         reality[i] = rand()%9+1;
         //判断是否有重复,成功
@@ -37,7 +39,19 @@ int main(){
             else x++;
         }
     }
-    for (int i = 0;i <= 3;i++)
-        printf("%d",reality[i]);
+    //开始判断，判断有几个相同
+    for (int i = 0;i <= 3;i++){
+        for (int j =0;j <= 3;j++){
+            if (try[j] == reality[i])
+                sameNumber++;
+        }
+    }
+    for (int i = 0;i <= 3;i++){
+        if(reality[i] = try[i])
+            sameLocation++;
+        if(sameLocation == 4)
+            printf("成功！");
+    }
+    printf("%dA%dB",sameLocation,sameNumber - sameLocation);
     return 0;
 }
