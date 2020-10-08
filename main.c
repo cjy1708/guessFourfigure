@@ -5,12 +5,12 @@
 int main(){
     int reality[4] = {0};
     int try[4] = {0};
-    int tool = 0; //å·¥å…·
-    srand(time(0));//åˆ·æ–°æ—¶é—´
+    int tool = 0; //¹¤¾ß
+    srand(time(0));//Ë¢ÐÂÊ±¼ä
 
     for (int i = 0;i <= 3;i++){
         reality[i] = rand()%9+1;
-        //åˆ¤æ–­æ˜¯å¦æœ‰é‡å¤,æˆåŠŸ
+        //ÅÐ¶ÏÊÇ·ñÓÐÖØ¸´,³É¹¦
         for(int y = 0;y < i;){
             if (reality[i] == reality[y]){
                 reality[i] = rand()%9+1;
@@ -21,7 +21,7 @@ int main(){
         scanf("%d",&try[i]);
     }
     for (int i = 0;i <= 3;i++){
-        //æ¯”è¾ƒå¤§å°å¹¶æŽ’åºï¼ŒæˆåŠŸ
+        //±È½Ï´óÐ¡²¢ÅÅÐò£¬³É¹¦
         for (int x = 0;x < i;){
             if (reality[x] >= reality[i]){
                 tool = reality[x];
@@ -37,7 +37,6 @@ int main(){
             else x++;
         }
     }
-
     for (int i = 0;i <= 3;i++)
         printf("%d",reality[i]);
     return 0;
