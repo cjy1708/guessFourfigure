@@ -34,7 +34,7 @@ int main(){
             else x++;
         }
     }
-    printf("%d %d %d %d",reality[0],reality[1],reality[2],reality[3]);
+//    printf("%d %d %d %d",reality[0],reality[1],reality[2],reality[3]);
     do{
         //”√ªß ‰»Î
         for (int i = 0;i <= 3;i++)
