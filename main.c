@@ -9,7 +9,7 @@ int main(){
     int sameNumber = 0;//相同的数个数
     int sameLocation = 0;
     srand(time(0));//刷新时间
-    //
+
     for (int i = 0;i <= 3;i++){
         //产生随机数
         reality[i] = rand()%9+1;
@@ -70,5 +70,7 @@ int main(){
         sameLocation = sameNumber = 0;
     }
     }while (sameLocation < 4);
+    getchar();
+    getchar();
     return 0;
 }
